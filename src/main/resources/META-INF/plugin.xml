@@ -1,0 +1,29 @@
+<idea-plugin>
+    <id>org.tarantsov.plug-3</id>
+    <name>DF Artifacts Operations</name>
+    <vendor email="andrii.tarantsov@equifax.com" >Andrii Tarantsov at Equifax.com</vendor>
+
+    <description><![CDATA[
+    Provide template operations for those who edits DataFabric catalog items
+    ]]></description>
+
+    <!-- please see https://plugins.jetbrains.com/docs/intellij/plugin-compatibility.html
+         on how to target different products -->
+    <depends>com.intellij.modules.platform</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <!-- Add your extensions here -->
+    </extensions>
+
+    <actions>
+        <!-- Дія, яка описує ваш плагін -->
+        <action id="MyPlugin.SampleAction"
+                class="org.tarantsov.SampleAction"
+                text="Extract Dataview Definition"
+                description="Extract dataview definition">
+            <add-to-group group-id="EditorPopupMenu" anchor="last"/>
+            <!-- Визначте комбінацію клавіш для вашого плагіну -->
+            <keyboard-shortcut keymap="$default" first-keystroke="control shift K"/>
+        </action>
+    </actions>
+</idea-plugin>
